@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: E4_rca
+Bundle-SymbolicName: com.anton.e4_rca;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.anton.e4_rca.Activator
+Bundle-Vendor: ANTON
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.apache.felix.scr,
+ org.eclipse.equinox.event,
+ org.eclipse.osgi.services,
+ org.eclipse.osgi.util
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: com.anton.e4_rca
+Bundle-ActivationPolicy: lazy

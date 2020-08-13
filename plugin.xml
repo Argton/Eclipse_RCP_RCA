@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.anton.e4_rca.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.anton.e4_rca.Perspective"
+            name="RCP Perspective"
+            id="com.anton.e4_rca.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="true"
+            icon="icons/sample2.gif"
+            class="com.anton.e4_rca.View"
+            name="Message"
+            id="com.anton.e4_rca.view">
+      </view>
+      <view
+            allowMultiple="true"
+            icon="icons/sample3.gif"
+            class="com.anton.e4_rca.NavigationView"
+            name="Mailboxes"
+            id="com.anton.e4_rca.navigationView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="com.anton.e4_rca.category"
+            name="Mail">
+      </category>
+      <command
+            description="Opens a mailbox"
+            name="Open Mailbox"
+            id="com.anton.e4_rca.open"
+            categoryId="com.anton.e4_rca.category">
+      </command>
+      <command
+            description="Open a message dialog"
+            name="Open Message Dialog"
+            id="com.anton.e4_rca.openMessage"
+            categoryId="com.anton.e4_rca.category">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.anton.e4_rca.open"
+            sequence="CTRL+SHIFT+O"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="com.anton.e4_rca.openMessage"
+            sequence="CTRL+SHIFT+M"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+      <key
+            commandId="org.eclipse.ui.file.exit"
+            sequence="CTRL+SHIFT+Q"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            name="RCP Product"
+            application="com.anton.e4_rca.application">
+         <property
+               name="aboutText"
+               value="RCP Mail template created by PDE">
+         </property>
+         <property
+               name="windowImages"
+               value="icons/sample2.gif">
+         </property>
+         <property
+               name="aboutImage"
+               value="product_lg.gif">
+         </property>
+      </product>
+   </extension>
+
+</plugin>

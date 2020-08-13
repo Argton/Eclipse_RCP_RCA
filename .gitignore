@@ -1,0 +1,15 @@
+/Debug/
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+*.loadpath
+*.o
+
+# Locally stored "Eclipse launch configurations"
+*.launch
